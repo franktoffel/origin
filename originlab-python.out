@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{OriginLab vs Python \(comparaci\363n de gr\341ficas\)}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{``Use the right tool''}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{\277De qu\351 va este Notebook?}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{\277De qu\351 NO va este Notebook?}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Librer\355as gr\341ficas en Python:}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Comparaci\363n de capacidades gr\341ficas \(Origin vs Python\)}{}% 6
+\BOOKMARK [2][-]{subsubsection.2.0.1}{Potencia de matplotlib: Resultados combinados con LaTeX}{section.2}% 7
+\BOOKMARK [3][-]{subsubsection.2.0.2}{Representaci\363n de errores}{subsubsection.2.0.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.0.3}{Diagramas de cajas \(Whiskey\)}{subsubsection.2.0.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.0.4}{Matriz de dispersi\363n \(Scatter Matrix\)}{subsubsection.2.0.1}% 10
+\BOOKMARK [3][-]{subsubsection.2.0.5}{Diagramas con coordenadas polares:}{subsubsection.2.0.1}% 11
+\BOOKMARK [3][-]{subsubsection.2.0.6}{Diagramas de contorno:}{subsubsection.2.0.1}% 12
+\BOOKMARK [2][-]{subsection.2.1}{Gr\341ficas en 3D}{section.2}% 13
+\BOOKMARK [2][-]{subsection.2.2}{Superficie en 3D}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Superficies 3D combinadas con diagramas de contorno}{subsection.2.2}% 15
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Cascada 3D}{subsection.2.2}% 16
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Diagramas de dispersi\363n en 3D:}{subsection.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.3}{Un paso m\341s all\341}{section.2}% 18

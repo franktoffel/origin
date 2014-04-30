@@ -1,0 +1,1254 @@
+
+% Default to the notebook output style
+
+% Documento generado automaticamente mediante pandoc
+% ipython nbconvert --to latex originlab-python.ipynb    
+
+% Para obtener PDF sustituir $\LaTeX$ por \LaTeX
+% Eliminar animación gif
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass{article}
+
+    
+    
+    \usepackage{graphicx} % Used to insert images
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{color} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    
+
+    
+    
+    \definecolor{orange}{cmyk}{0,0.4,0.8,0.2}
+    \definecolor{darkorange}{rgb}{.71,0.21,0.01}
+    \definecolor{darkgreen}{rgb}{.12,.54,.11}
+    \definecolor{myteal}{rgb}{.26, .44, .56}
+    \definecolor{gray}{gray}{0.45}
+    \definecolor{lightgray}{gray}{.95}
+    \definecolor{mediumgray}{gray}{.8}
+    \definecolor{inputbackground}{rgb}{.95, .95, .85}
+    \definecolor{outputbackground}{rgb}{.95, .95, .95}
+    \definecolor{traceback}{rgb}{1, .95, .95}
+    % ansi colors
+    \definecolor{red}{rgb}{.6,0,0}
+    \definecolor{green}{rgb}{0,.65,0}
+    \definecolor{brown}{rgb}{0.6,0.6,0}
+    \definecolor{blue}{rgb}{0,.145,.698}
+    \definecolor{purple}{rgb}{.698,.145,.698}
+    \definecolor{cyan}{rgb}{0,.698,.698}
+    \definecolor{lightgray}{gray}{0.5}
+    
+    % bright ansi colors
+    \definecolor{darkgray}{gray}{0.25}
+    \definecolor{lightred}{rgb}{1.0,0.39,0.28}
+    \definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
+    \definecolor{lightblue}{rgb}{0.53,0.81,0.92}
+    \definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
+    \definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
+    
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{originlab-python}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=blue,
+      linkcolor=darkorange,
+      citecolor=darkgreen,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \textbf{Francisco José Navarro-Brull}
+
+    \emph{TÉCNICAS DE CÁLCULO NUMÉRICO APLICADAS A LA FÍSICA Y A LA QUÍMICA
+- Máster en Ciencia de Materiales de la Universidad de Alicante}
+
+
+    \section{OriginLab vs Python (comparación de gráficas)}
+
+
+    El software \href{http://www.originlab.com/}{OriginLab®} es uno de lo
+más utilizados en el mundo académico gracias a su versatilidad y
+potencia de cálculo. En concreto, OriginLab® tiene una serie de ventajas
+frente a sus \emph{competidores} (Excel®, MATLAB®\ldots{}) ya que logra
+unir ambos mundos permitiendo a alguien acostumbrado a la interfaz del
+primero realizar tareas de cálculo numérico más comunes del segundo.
+Pero si hay algo que verdaderamente es útil para un investigador que
+utiliza OriginLab®, son sus gráficas ``listas para publicar''.
+
+En este contexto, \href{https://www.python.org/}{Python} cuenta con
+magníficas librerías capaces de llevar a cabo tareas de cálculo numérico
+(NumPy, SciPy) así para obtener gráficas (matplotlib) de calidad
+equivalente o superior a OriginLab.
+
+Si has leído con detenimiento hasta aquí y te suena el software citado
+hasta ahora, la pregunta que te vendrá a la mente es ¿cómo un lenguaje
+de programación como Python va a sustituir a OrginLab® y su interfaz
+tipo Excel®?
+
+Veamos, Python junto a sus librerías permite a día de hoy resolver el
+ciclo de trabajo propio tal y como permite OriginLab®. Éstos son: 1.
+Importar datos (xlrd, NumPy, csv, pandas) 2. Procesado de datos y
+cálculo (SciPy, NumPy) 3. Visualización (matplotib) 4. Iteración pasos 2
+y 3 (IPython Notebook, Spyder) 5. Publicación de resultados (matplotib)
+
+    Entonces, \textbf{¿por qué no todo el mundo está usando Python? ¿cuál es
+el problema?}
+
+Bien, en todo este planteamiento Python \emph{falla} en un concepto.
+OriginLab® no requiere conocimientos de programación para su uso más
+básico, Python sí.
+
+Por norma general:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Muchos científicos no tienen conocimientos de programación (o éstos
+  son muy reducidos)
+\item
+  No tienen tiempo y quieren realizar estas tareas de la forma más
+  rápida posible
+\item
+  Representar gráficas por comandos de texto puede ser frustrante
+\end{itemize}
+
+    Un fanático de Python (u otro lenguaje) te intentará convencer
+hablándote de las ventajas de aprender a programar, que ciertamente son
+muchas, pero esto te llevará tiempo (que \emph{no} tienes) y más
+problemas (cuando tú lo que buscabas era una solución).
+
+
+    \subsection{``Use the right tool''}
+
+
+    Si te sientes cómodo utilizando OriginLab® y no le encuentras
+limitaciones, sigue utilizándolo y amortiza los 850 o 1800 dólares que
+vale su licencia para uso académico o profesional.
+
+Si por el contrario, quieres (y dispones de tiempo para ello): *
+Automatizar el importado y procesado de datos * Tener a tu alcance
+algoritmos avanzados (y gratuitos) de estadística, machine learning,
+inteligencia artificial, computer vision\ldots{} * Ahorrar en licencias
+y poder usar este software en la empresa a la que vayas * Aprender a
+programar en uno de los lenguajes más versátiles que existen * Hacer tu
+investigación reproducible añadiendo a tu paper no sólo la información,
+si no además las herramientas poder reutilizar tu trabajo y ganar más
+impacto * Obtener gráficas para tus artículos de calidad igual o
+superior a Origin
+
+¡Eres bienvenido al mundo de Python!
+
+
+    \subsection{¿De qué va este Notebook?}
+
+
+    Como prueba de concepto, se utilizará IPython Notebook para llevar a
+cabo un proceso de reproducción de muchas de las gráficas que OriginLab®
+publicita. Puedes dar un vistazo a la
+\href{http://www.originlab.com/www/products/graphgallery.aspx}{Galería
+de OriginLab®} y \href{http://matplotlib.org/gallery.html}{Galería de
+matplotib} para ver lo similares que pueden llegar a ser.
+
+IPython Notebook un formato y solución elegante que ademas de código
+puede contener texto, fórmulas mediante \LaTeX, vídeos, imágenes y
+gráficas.
+
+    Nota: La mejor manera de trabajar con matplotlib es buscar en su
+\href{http://matplotlib.org/gallery.html}{galería} una gráfica similar
+al resultado que queramos conseguir y utilizar dicho código como guía o
+plantilla de trabajo
+
+
+    \subsection{¿De qué \emph{NO} va este Notebook?}
+
+
+    Pese a que se comentarán brevemente ciertas líneas de código, este
+notebook no pretende ser un tutorial de matplotlib y/o Python. Para una
+introducción a los mismos te recomendamos este
+\href{http://cacheme.org/curso-online-python-cientifico-ingenieros/}{Curso
+online (gratuito) de introducción a Python para científicos e
+ingenieros} por {[}@Pybonacci{]}(http://pybonacci.wordpress.com) y
+organizado por \href{http://cacheme.org}{CAChemE.org}.
+
+Por cierto, también puedes echarle un vistazo a
+\href{https://www.youtube.com/watch?v=_Bm8M9IwuFk}{Avoplot}, un proyecto
+muy interesante que pretende simiplificar la vida a muchos científicos
+pero que de momento se encuentra en fase de desarrollo.
+
+
+    \subsection{Librerías gráficas en Python:}
+
+
+    Los siguientes ejemplos harán uso de matplotlib y ajustarán el estilo de
+las gráficas para hacerlas similares las de OriginLab®. Matplotlib puede
+parecer viejo, estático y tener una configuración por defecto cutre. Sin
+embargo, su uso es muy, muy extenso y ha demostrado ser una librería a
+prueba de todo. Tal y como mencionaba
+{[}@Pybonacci{]}(http://twitter.com/ptbonacci), es válido para el 99\%
+de las personas. El 1\% restante tiene varias alternativas que elegir.
+Muchas de ellas se basan matplotlib, lo que demuestra su robustez, como
+\href{http://www.stanford.edu/~mwaskom/software/seaborn/}{seaborn},
+\href{http://vincent.readthedocs.org/en/latest/}{vincent},
+\href{http://blog.yhathq.com/posts/ggplot-for-python.html}{ggplot-py},
+\href{http://olgabot.github.io/prettyplotlib/}{prettyplot},
+\href{https://plot.ly/}{plot.ly},
+\href{https://github.com/wrobstory/bearcart}{bearcart} o una de las más
+recientes e interesantes \href{http://mpld3.github.io/}{mpld3}. Por otro
+lado existen alternativas que han empezado un motor gráfico de Python
+desde cero cómo por ejemplo \href{http://bokeh.pydata.org/}{Bokeh}.
+
+En cualquier caso matplotlib otorga las siguientes funcionalidades.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  API: Tipo MATLAB (por estados, tersa, menos poderosa) u orientada a
+  objetos (sin estados, verbosa, más poderosa)
+\item
+  Abstracción: Básicamente un potente modelo interno de objetos SVG
+  (vectoriales)
+\item
+  Gráficos de salida:
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Gráficos estáticos finales (backends) de los cuales puedas
+    necesitar: pdf, png, svg, eps, ps, pgf, jpeg\ldots{}
+  \item
+    Así como interfaces gráficas (GUI backends): Tk, Agg, OSX, GTK, Qt4,
+    WebAgg\ldots{}
+  \end{itemize}
+\end{itemize}
+
+Para aprender más sobre matplotib es recomendable leer
+\href{http://nbviewer.ipython.org/urls/raw.githubusercontent.com/jakevdp/OpenVisConf2014/master/Index.ipynb}{Python
+in the browser age} por Jake VanderPlas (fuente original de lo descrito
+en este último párrafo).
+
+
+    \section{Comparación de capacidades gráficas (Origin vs Python)}
+
+
+    En primer lugar, queremos que las gráficas aparezcan en este mismo
+notebook por lo que damos la siguiente instrucción:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{o}{\PYZpc{}}\PY{k}{matplotlib} \PY{n}{inline}
+\end{Verbatim}
+
+    Acto seguido importamos las librerías necesarias para la generación y
+representación los resultados:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+\end{Verbatim}
+
+    En caso de trabajar con Python 2.7:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{from} \PY{n+nn}{\PYZus{}\PYZus{}future\PYZus{}\PYZus{}} \PY{k+kn}{import} \PY{n}{division}
+\end{Verbatim}
+
+
+    \subsubsection{Potencia de matplotlib: Resultados combinados con \LaTeX}
+
+
+    Antes de empezar veamos un ejemplo de la capacidad de matplotlib para
+generar figuras ``listas para publicar'' y su magnífica inegración con
+\LaTeX. Además de representar valores numéricos, matplotlib permite la
+añadir notas y texto en este formato. Un ejemplo de esta funcionalidad
+es el siguiente:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c}{\PYZsh{} Los comentarios en Python se escriben empezando con una almohadilla}
+        \PY{c}{\PYZsh{} estas líneas serán ignoradas en la ejecución }
+        
+        
+        \PY{c}{\PYZsh{} Creamos la función que queremos representar (e integrar)}
+        \PY{k}{def} \PY{n+nf}{func}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{:}
+            \PY{k}{return} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{3}\PY{p}{)} \PY{o}{*} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{5}\PY{p}{)} \PY{o}{*} \PY{p}{(}\PY{n}{x} \PY{o}{\PYZhy{}} \PY{l+m+mi}{7}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{85}
+        
+        \PY{c}{\PYZsh{} Especificamos los límtes de integración}
+        \PY{n}{a}\PY{p}{,} \PY{n}{b} \PY{o}{=} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{9} 
+        
+        \PY{c}{\PYZsh{} Crea un vector con valores de 0 a 10}
+        \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Obtenemos los valores de y correspondientes}
+        \PY{n}{y} \PY{o}{=} \PY{n}{func}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Utilizamos matplotlib (este formato es orientado a clases)}
+        \PY{c}{\PYZsh{} matplotlib también puede usarse tipo MATLAB(R)}
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Dibuja con una línea roja de espesor determinado los resultados}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Establece el límite inferior del eje y}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{n}{ymin}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Crea la región sombreada que representará la integral}
+        \PY{n}{ix} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{)}
+        \PY{n}{iy} \PY{o}{=} \PY{n}{func}\PY{p}{(}\PY{n}{ix}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Coordenadas de los puntos del polígono de la integral a representar}
+        \PY{n}{verts} \PY{o}{=} \PY{p}{[}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{]} \PY{o}{+} \PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n}{ix}\PY{p}{,} \PY{n}{iy}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{p}{[}\PY{p}{(}\PY{n}{b}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{]}
+        
+        \PY{c}{\PYZsh{} Carga la función Polygon de la librería}
+        \PY{k+kn}{from} \PY{n+nn}{matplotlib.patches} \PY{k+kn}{import} \PY{n}{Polygon}
+        
+        \PY{c}{\PYZsh{} Representa dicho polígono cierto 90 y 50\PYZpc{} de transparencia para el relleno y borde.}
+        \PY{n}{poly} \PY{o}{=} \PY{n}{Polygon}\PY{p}{(}\PY{n}{verts}\PY{p}{,} \PY{n}{facecolor}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{0.9}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{edgecolor}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{0.5}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{add\PYZus{}patch}\PY{p}{(}\PY{n}{poly}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Añade texto en latex con la siguiente instruccion}
+        \PY{c}{\PYZsh{} plt.text(coordenada\PYZus{}x, coordenada\PYZus{}y, texto, opciones)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mf}{0.5} \PY{o}{*} \PY{p}{(}\PY{n}{a} \PY{o}{+} \PY{n}{b}\PY{p}{)}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{,} \PY{l+s}{r\PYZdq{}}\PY{l+s}{\PYZdl{}}\PY{l+s}{\PYZbs{}}\PY{l+s}{int\PYZus{}a\PYZca{}b f(x)}\PY{l+s}{\PYZbs{}}\PY{l+s}{mathrm\PYZob{}d\PYZcb{}x\PYZdl{}}\PY{l+s}{\PYZdq{}}\PY{p}{,}
+                 \PY{n}{horizontalalignment}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{center}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Añade texto con posición relativa para indicar los ejes}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{figtext}\PY{p}{(}\PY{l+m+mf}{0.9}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZdl{}x\PYZdl{}}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{figtext}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.9}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZdl{}y\PYZdl{}}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Ocutlamos los bordes superior y derecho del cuadro de la gráfica}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{spines}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{right}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}visible}\PY{p}{(}\PY{n+nb+bp}{False}\PY{p}{)}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{spines}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{top}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}visible}\PY{p}{(}\PY{n+nb+bp}{False}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Añade marcas en el eje x con los límites de integración}
+        \PY{c}{\PYZsh{} Coordenadas}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticks}\PY{p}{(}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{)}\PY{p}{)}
+        \PY{c}{\PYZsh{} Texto}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xticklabels}\PY{p}{(}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZdl{}a\PYZdl{}}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZdl{}b\PYZdl{}}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Establece marcas sólo en el eje x inferior}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{xaxis}\PY{o}{.}\PY{n}{set\PYZus{}ticks\PYZus{}position}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{bottom}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Elimina marcas del eje y}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}yticks}\PY{p}{(}\PY{p}{[}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Muestra figura}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Guarda figura en png o pdf}
+        \PY{c}{\PYZsh{} Más formatosy y/o opciones mirar en la documentación}
+        \PY{c}{\PYZsh{} http://matplotlib.org/faq/howto\PYZus{}faq.html\PYZsh{}save\PYZhy{}multiple\PYZhy{}plots\PYZhy{}to\PYZhy{}one\PYZhy{}pdf\PYZhy{}file}
+        
+        \PY{c}{\PYZsh{} Dado que llamamos a la figura \PYZdq{}fig\PYZdq{} cuando la creamos,}
+        \PY{c}{\PYZsh{} llamamos al método .savefig}
+        
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/mi\PYZus{}figura.pdf\PYZsq{})}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/mi\PYZus{}figura.png\PYZsq{})}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_24_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    \subsubsection{Representación de errores}
+
+
+    A pesar de que Excel® permite representar errores en los gráficos, esta
+es una funcionalidad importante. Veamos como podemos hacer esto con
+matplotib.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{n\PYZus{}grupos} \PY{o}{=} \PY{l+m+mi}{11}
+        
+        \PY{n}{valores} \PY{o}{=} \PY{p}{(}\PY{l+m+mf}{2.5}\PY{p}{,} \PY{l+m+mf}{7.5}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{l+m+mi}{26}\PY{p}{,} \PY{l+m+mi}{16}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{,} \PY{l+m+mf}{22.5}\PY{p}{,} \PY{l+m+mi}{24}\PY{p}{,} \PY{l+m+mi}{29}\PY{p}{,} \PY{l+m+mi}{25}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{)}
+        \PY{n}{errores} \PY{o}{=} \PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mf}{1.5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+        
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
+        \PY{n}{ax}\PY{o}{.}\PY{n}{yaxis}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{p}{)}
+        
+        \PY{n}{index} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n}{n\PYZus{}grupos}\PY{p}{)}
+        \PY{n}{ancho\PYZus{}banda} \PY{o}{=} \PY{l+m+mf}{0.8}
+        
+        \PY{n}{opacity} \PY{o}{=} \PY{l+m+mf}{0.6}
+        \PY{n}{error\PYZus{}config} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s}{\PYZsq{}}\PY{l+s}{ecolor}\PY{l+s}{\PYZsq{}}\PY{p}{:} \PY{l+s}{\PYZsq{}}\PY{l+s}{0.3}\PY{l+s}{\PYZsq{}}\PY{p}{\PYZcb{}}
+        
+        \PY{n}{distancia\PYZus{}inicio} \PY{o}{=} \PY{l+m+mf}{0.5}
+        
+        \PY{n}{coordenadas\PYZus{}x\PYZus{}barras} \PY{o}{=} \PY{n}{index}\PY{o}{+}\PY{n}{distancia\PYZus{}inicio}
+        
+        \PY{n}{rects1} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n}{coordenadas\PYZus{}x\PYZus{}barras}\PY{p}{,} \PY{n}{valores}\PY{p}{,} \PY{n}{ancho\PYZus{}banda}\PY{p}{,}
+                         \PY{n}{alpha}\PY{o}{=}\PY{n}{opacity}\PY{p}{,}
+                         \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{orange}\PY{l+s}{\PYZsq{}}\PY{p}{,}
+                         \PY{n}{yerr}\PY{o}{=}\PY{n}{errores}\PY{p}{,}
+                         \PY{n}{error\PYZus{}kw}\PY{o}{=}\PY{n}{error\PYZus{}config}\PY{p}{,}
+                         \PY{p}{)}
+        
+        \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Bin}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Count}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{n}{etiquetas\PYZus{}eje\PYZus{}x} \PY{o}{=} \PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{7\PYZhy{}8}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{9\PYZhy{}10}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{11\PYZhy{}12}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{13\PYZhy{}14}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{15\PYZhy{}16}\PY{l+s}{\PYZsq{}}\PY{p}{,}
+                           \PY{l+s}{\PYZsq{}}\PY{l+s}{17\PYZhy{}18}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{19\PYZhy{}20}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{21\PYZhy{}22}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{23\PYZhy{}24}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{25\PYZhy{}26}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{27\PYZhy{}28}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{n}{coordenadas\PYZus{}etiquetas\PYZus{}x} \PY{o}{=} \PY{n}{index} \PY{o}{+} \PY{n}{ancho\PYZus{}banda}\PY{o}{/}\PY{l+m+mi}{2} \PY{o}{+} \PY{n}{distancia\PYZus{}inicio}
+        
+        \PY{n}{plt}\PY{o}{.}\PY{n}{xticks}\PY{p}{(}\PY{n}{coordenadas\PYZus{}etiquetas\PYZus{}x}\PY{p}{,} \PY{n}{etiquetas\PYZus{}eje\PYZus{}x}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras como archivos}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/barras\PYZus{}errores.pdf\PYZsq{})}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/barras\PYZus{}errores.png\PYZsq{},dpi=150)}
+        
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_27_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/Error_Bar_Scatter_and_Column_Plot.gif}{(ver
+online)}.
+
+
+    \subsubsection{Diagramas de cajas (Whiskey)}
+
+
+    Veamos algo más interesante, realizar
+\href{http://es.wikipedia.org/wiki/Diagrama_de_caja}{diagramas de cajas
+y bigotes} con Excel® ya no es tan sencillo. Sin embargo en matplotlib:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{k}{def} \PY{n+nf}{fakeBootStrapper}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+        \PY{l+s+sd}{    Devuelve una mediana arbitraria e intervalos de confianza}
+        \PY{l+s+sd}{    en una tupla}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{if} \PY{n}{n} \PY{o}{==} \PY{l+m+mi}{1}\PY{p}{:}
+                \PY{n}{med} \PY{o}{=} \PY{l+m+mf}{0.1}
+                \PY{n}{CI} \PY{o}{=} \PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.25}\PY{p}{,} \PY{l+m+mf}{0.25}\PY{p}{)}
+            \PY{k}{else}\PY{p}{:}
+                \PY{n}{med} \PY{o}{=} \PY{l+m+mf}{0.2}
+                \PY{n}{CI} \PY{o}{=} \PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.35}\PY{p}{,} \PY{l+m+mf}{0.50}\PY{p}{)}
+        
+            \PY{k}{return} \PY{n}{med}\PY{p}{,} \PY{n}{CI}
+        
+        
+        \PY{c}{\PYZsh{} Fija una semilla para el random}
+        \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+        \PY{n}{inc} \PY{o}{=} \PY{l+m+mf}{0.1}
+        \PY{n}{e1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{500}\PY{p}{,}\PY{p}{)}\PY{p}{)}
+        \PY{n}{e2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{500}\PY{p}{,}\PY{p}{)}\PY{p}{)}
+        \PY{n}{e3} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1} \PY{o}{+} \PY{n}{inc}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{500}\PY{p}{,}\PY{p}{)}\PY{p}{)}
+        \PY{n}{e4} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{normal}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{inc}\PY{p}{,} \PY{n}{size}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{500}\PY{p}{,}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n}{tratamientos} \PY{o}{=} \PY{p}{[}\PY{n}{e1}\PY{p}{,}\PY{n}{e2}\PY{p}{,}\PY{n}{e3}\PY{p}{,}\PY{n}{e4}\PY{p}{]}
+        \PY{n}{med1}\PY{p}{,} \PY{n}{CI1} \PY{o}{=} \PY{n}{fakeBootStrapper}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+        \PY{n}{med2}\PY{p}{,} \PY{n}{CI2} \PY{o}{=} \PY{n}{fakeBootStrapper}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+        \PY{n}{medianas} \PY{o}{=} \PY{p}{[}\PY{n+nb+bp}{None}\PY{p}{,} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{med1}\PY{p}{,} \PY{n}{med2}\PY{p}{]}
+        \PY{n}{conf\PYZus{}intervalos} \PY{o}{=} \PY{p}{[}\PY{n+nb+bp}{None}\PY{p}{,} \PY{n+nb+bp}{None}\PY{p}{,} \PY{n}{CI1}\PY{p}{,} \PY{n}{CI2}\PY{p}{]}
+        
+        \PY{n}{fig}\PY{p}{,} \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Posiciones de las cajas}
+        \PY{n}{pos} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{tratamientos}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{1}
+        
+        \PY{c}{\PYZsh{} Representa el diagrama}
+        \PY{n}{bp} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{n}{tratamientos}\PY{p}{,} \PY{n}{sym}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{k+}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{positions}\PY{o}{=}\PY{n}{pos}\PY{p}{,}
+                        \PY{n}{notch}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{bootstrap}\PY{o}{=}\PY{l+m+mi}{5000}\PY{p}{,}
+                        \PY{n}{usermedians}\PY{o}{=}\PY{n}{medianas}\PY{p}{,}
+                        \PY{n}{conf\PYZus{}intervals}\PY{o}{=}\PY{n}{conf\PYZus{}intervalos}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Etiquetas para los ejes}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Tratamiento}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Respuesta}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Tipo de diagrama de cajas (Whisker)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{setp}\PY{p}{(}\PY{n}{bp}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{whiskers}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{k}\PY{l+s}{\PYZsq{}}\PY{p}{,}  \PY{n}{linestyle}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZsq{}} \PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{setp}\PY{p}{(}\PY{n}{bp}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{fliers}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{markersize}\PY{o}{=}\PY{l+m+mf}{5.0}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras como archivos}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/diagra\PYZhy{}cajas.pdf\PYZsq{})}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/diagra\PYZhy{}cajas.png\PYZsq{},dpi=150)}
+        
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_31_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/Box_Width_by_Variable.png}{(ver
+online)}.
+
+    \subsubsection{Matriz de dispersión (Scatter
+Matrix)}\label{matriz-de-dispersiuxf3n-scatter-matrix}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{c}{\PYZsh{} La forma más sencilla de realizar esta visualización es}
+         \PY{c}{\PYZsh{} mediante la librería pandas que permite trabajar de forma similar a R}
+         
+         \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k+kn}{as} \PY{n+nn}{pd}
+         
+         \PY{c}{\PYZsh{} Lee los datos (deben de estar en la carpeta de este Notebook)}
+         \PY{c}{\PYZsh{} http://en.wikipedia.org/wiki/Iris\PYZus{}flower\PYZus{}data\PYZus{}set}
+         
+         \PY{n}{iris} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{data/iris.csv}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Establece el dataframe}
+         \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{iris}\PY{p}{,} \PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s}{\PYZsq{}}\PY{l+s}{Longitudo\PYZhy{}sepalo}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{Anchura\PYZhy{}sepalo}\PY{l+s}{\PYZsq{}}\PY{p}{,}
+                                          \PY{l+s}{\PYZsq{}}\PY{l+s}{Longitud\PYZhy{}petalo}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{Anchura\PYZhy{}petalo}\PY{l+s}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Calcula y representa resultados}
+         \PY{n}{pd}\PY{o}{.}\PY{n}{scatter\PYZus{}matrix}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras como archivos}
+         \PY{c}{\PYZsh{}plt.savefig(r\PYZsq{}figuras/matriz\PYZhy{}dispersion.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}plt.savefig(r\PYZsq{}figuras/matriz\PYZhy{}dispersion.png\PYZsq{},dpi=150)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_34_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries/Scatter_Matrix_1127.png}{(ver
+online)}.
+
+
+    \subsubsection{Diagramas con coordenadas polares:}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{50}
+         \PY{n}{radio} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{)}
+         \PY{n}{theta} \PY{o}{=} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{)}
+         \PY{n}{area} \PY{o}{=} \PY{l+m+mi}{75} \PY{o}{*} \PY{n}{radio}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{)}
+         \PY{n}{colores} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{N}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Crea una figura con coordenadas polares}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplot}\PY{p}{(}\PY{l+m+mi}{111}\PY{p}{,} \PY{n}{polar}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Representa una diagrama de dispersión}
+         \PY{n}{c} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{theta}\PY{p}{,} \PY{n}{radio}\PY{p}{,} \PY{n}{c}\PY{o}{=}\PY{n}{colores}\PY{p}{,}
+                         \PY{n}{s}\PY{o}{=}\PY{n}{area}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.70}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras como archivos}
+         \PY{c}{\PYZsh{}plt.savefig(r\PYZsq{}figuras/coordenadas\PYZhy{}polares.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}plt.savefig(r\PYZsq{}figuras/coordenadas\PYZhy{}polares.png\PYZsq{},dpi=150)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_37_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin:
+
+
+    \subsubsection{Diagramas de contorno:}
+
+
+    Otro tipo de gráfico que Excel® presenta limtaciones son los diagramas
+de contorno. Veamos cómo hacerlo con matplotlib:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{c}{\PYZsh{} Función que queremos representar}
+        \PY{k}{def} \PY{n+nf}{g}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{:}
+            \PY{k}{return} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}
+        
+        \PY{c}{\PYZsh{} Genera dos vectores para la malla}
+        \PY{c}{\PYZsh{} valor numérico alto para ver resultados de la curva suaves}
+        \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{1000}\PY{p}{)}
+        \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1000}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Creamos la malla }
+        \PY{n}{xx}\PY{p}{,} \PY{n}{yy} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Calculamos los valores de la función para cada punto de la malla}
+        \PY{n}{zz} \PY{o}{=} \PY{n}{g}\PY{p}{(}\PY{n}{xx}\PY{p}{,} \PY{n}{yy}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Ajusta el tamaño de la figura con figsize}
+        \PY{n}{fig}\PY{p}{,} \PY{n}{axes} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Asigna la salida a la variable cs para luego crear el colorbar}
+        \PY{n}{cs} \PY{o}{=} \PY{n}{axes}\PY{o}{.}\PY{n}{contourf}\PY{p}{(}\PY{n}{xx}\PY{p}{,} \PY{n}{yy}\PY{p}{,} \PY{n}{zz}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{cm}\PY{o}{.}\PY{n}{BrBG}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Con `colors=\PYZsq{}k\PYZsq{}` dibujamos todas las líneas negras}
+        \PY{c}{\PYZsh{} Asigna la salida a la variable cs2 para crear las etiquetas}
+        \PY{n}{cs2} \PY{o}{=} \PY{n}{axes}\PY{o}{.}\PY{n}{contour}\PY{p}{(}\PY{n}{xx}\PY{p}{,} \PY{n}{yy}\PY{p}{,} \PY{n}{zz}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}\PY{p}{,} \PY{n}{colors}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{k}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Crea las etiquetas sobre las líneas}
+        \PY{n}{axes}\PY{o}{.}\PY{n}{clabel}\PY{p}{(}\PY{n}{cs2}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Crea la barra de colores (nótese que pertenece a fig)}
+        \PY{n}{fig}\PY{o}{.}\PY{n}{colorbar}\PY{p}{(}\PY{n}{cs}\PY{p}{)}
+        
+        \PY{c}{\PYZsh{} Ponemos las etiquetas de los ejes}
+        \PY{n}{axes}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Eje x}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{axes}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Eje y}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{axes}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s}{u\PYZdq{}}\PY{l+s}{Función representada: \PYZdl{}g(x, y) = \PYZhy{} (}\PY{l+s}{\PYZbs{}}\PY{l+s}{cos\PYZob{}x\PYZcb{} }\PY{l+s}{\PYZbs{}}\PY{l+s}{, }\PY{l+s}{\PYZbs{}}\PY{l+s}{sin\PYZob{}y\PYZcb{})\PYZca{}3\PYZdl{}}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+        
+        
+        \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras en archivos}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/diagrama\PYZhy{}contorno.pdf\PYZsq{})}
+        \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/diagrama\PYZhy{}contorno.png\PYZsq{},dpi=150)}
+        
+        \PY{c}{\PYZsh{} Muestra figura}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_41_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/Overlay_Contour_Plot.png}{(ver
+online)}.
+
+
+    \subsection{Gráficas en 3D}
+
+
+    Una de las cosas más llamativas que publicita OriginLab® es el uso de su
+herramienta para graficar resultados en 3D. Ciertamente, Excel® dispone
+de pocas herramientas en ese aspecto y MATLAB® tiene el mismo problema
+que Python (hay que aprender a programar) con el añadido del coste de
+licencia extra. Por ello la solución más cómoda es usar OriginLab®. No
+te ahorras la licencia pero te evitas tener que aprender programar.
+
+    Existe una regla no escrita que dice algo así: \textbf{\emph{``si la
+única forma de representar tus resultados es con una gráfica 3D, es que
+algo estás haciendo mal''}}
+
+Sin ánimo de ser tan radicales, vivimos en un mundo 2D. El papel o
+pantalla donde se verán tus resultados son en 2D y por ello es mejor
+evitar representar resultados mediante gráficas 3D. No obstante, para
+exploración y visualización de resultados interactiva, son una
+herramienta muy potente. Cabe destacar que matplotlib empezó a dar
+soporte a figuras en 3D recientemente. Si se requieren visualizaciones
+más complejas es recomendable usar
+\href{http://docs.enthought.com/mayavi/mayavi/auto/examples.html}{Mayavi}
+
+Veamos como hacer esto con matplotlib:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{c}{\PYZsh{} Cargamos la librería 3D de matplotlib}
+         \PY{k+kn}{from} \PY{n+nn}{mpl\PYZus{}toolkits.mplot3d} \PY{k+kn}{import} \PY{n}{axes3d}
+         
+         \PY{c}{\PYZsh{} Acceso rápido a los mapas de colores (colormap)}
+         \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k+kn}{import} \PY{n}{cm}
+\end{Verbatim}
+
+
+    \subsection{Superficie en 3D}
+
+
+    Empecemos con algo sencillo. Vamos a representar la superficie de un
+parboloide.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{c}{\PYZsh{} Crea los vectores x e y}
+         \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{)}
+         \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Genera el mallado 2D}
+         \PY{n}{X}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{meshgrid}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Calcula Z: Paraboloide}
+         \PY{n}{Z} \PY{o}{=} \PY{p}{(}\PY{n}{X}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{Y}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+         
+         \PY{c}{\PYZsh{} Tamaño de figura}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Proyección de la figura en 3D}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{n}{projection}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{3d}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Dibuja los resultados}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{jet}\PY{p}{,}
+                 \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{antialiased}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Texto de las etiquetas}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Eje X}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Eje Y}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlabel}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Eje Z}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Paraboloide}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras en archivos}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/superficie\PYZhy{}3D.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/superficie\PYZhy{}3D.png\PYZsq{},dpi=150)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_49_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/3d_surface_from_virtual_matrix_opengl.png}{(ver
+online)}.
+
+
+    \subsubsection{Superficies 3D combinadas con diagramas de contorno}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{n}{projection}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{3d}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Carga datos de para test}
+         \PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z} \PY{o}{=} \PY{n}{axes3d}\PY{o}{.}\PY{n}{get\PYZus{}test\PYZus{}data}\PY{p}{(}\PY{l+m+mf}{0.01}\PY{p}{)}
+         
+         \PY{n}{surf} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{,}
+                         \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{jet}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Proyección en la base}
+         \PY{n}{cset} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{contourf}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{l+m+mi}{25}\PY{p}{,} \PY{n}{zdir}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{z}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{offset}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{100}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{jet}\PY{p}{,} \PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Proyección de líneas en el lateral}
+         \PY{n}{cset} \PY{o}{=} \PY{n}{ax}\PY{o}{.}\PY{n}{contour}\PY{p}{(}\PY{n}{X}\PY{p}{,} \PY{n}{Y}\PY{p}{,} \PY{n}{Z}\PY{p}{,} \PY{n}{zdir}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{offset}\PY{o}{=}\PY{o}{\PYZhy{}}\PY{l+m+mi}{30}\PY{p}{,} \PY{n}{cmap}\PY{o}{=}\PY{n}{cm}\PY{o}{.}\PY{n}{jet}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Añade barra de color con valores de Z}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{colorbar}\PY{p}{(}\PY{n}{surf}\PY{p}{,} \PY{n}{shrink}\PY{o}{=}\PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{aspect}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Configuración de ejes y etiquetas}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{X}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{30}\PY{p}{,} \PY{l+m+mi}{30}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Z}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{100}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{Generado con matplotlib}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras en archivos}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/superficie\PYZhy{}3D\PYZhy{}combinado.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/superficie\PYZhy{}3D\PYZhy{}combinado.png\PYZsq{},dpi=150)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_52_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/3D_Surface_Plot.png}{(ver
+online)}.
+
+    \subsubsection{Cascada 3D}\label{cascada-3d}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{k+kn}{from} \PY{n+nn}{mpl\PYZus{}toolkits.mplot3d} \PY{k+kn}{import} \PY{n}{Axes3D}
+         \PY{k+kn}{from} \PY{n+nn}{matplotlib.collections} \PY{k+kn}{import} \PY{n}{PolyCollection}
+         \PY{k+kn}{from} \PY{n+nn}{matplotlib.colors} \PY{k+kn}{import} \PY{n}{colorConverter}
+         \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+         
+         \PY{c}{\PYZsh{} Para poder crear las señales usaremos una funcion de Gauss}
+         \PY{c}{\PYZsh{} y le añadiremos ruido blanco}
+         
+         \PY{k}{def} \PY{n+nf}{gauss\PYZus{}ruido}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{posicion}\PY{p}{,}\PY{n}{desviacion}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{} Genera una curva de Gauss con ruido blanco}
+         \PY{l+s+sd}{    con la posicion y desviacion estándar de entrada\PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{exp}\PY{p}{(} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{posicion}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{/} \PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{desviacion}\PY{p}{)}\PY{p}{)}
+             \PY{n}{ruido} \PY{o}{=} \PY{l+m+mf}{0.01}\PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+             \PY{n}{senyal} \PY{o}{=} \PY{n}{y} \PY{o}{+} \PY{n}{ruido}
+             \PY{k}{return} \PY{n}{senyal}
+         
+         
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{n}{projection}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{3d}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{cc} \PY{o}{=} \PY{k}{lambda} \PY{n}{arg}\PY{p}{:} \PY{n}{colorConverter}\PY{o}{.}\PY{n}{to\PYZus{}rgba}\PY{p}{(}\PY{n}{arg}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.6}\PY{p}{)}
+         
+         
+         
+         \PY{n}{posicion}\PY{o}{=} \PY{p}{[}\PY{l+m+mi}{50}\PY{p}{,} \PY{l+m+mi}{60}\PY{p}{,} \PY{l+m+mi}{70}\PY{p}{,} \PY{l+m+mi}{80}\PY{p}{]}
+         
+         
+         \PY{n}{verts} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{k}{for} \PY{n}{pos} \PY{o+ow}{in} \PY{n}{posicion}\PY{p}{:}
+             \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{150}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{)}
+             
+             \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{gauss\PYZus{}ruido}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{n}{pos}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+             
+             \PY{n}{y}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{y}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}
+             \PY{n}{verts}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         
+         
+         \PY{n}{poly} \PY{o}{=} \PY{n}{PolyCollection}\PY{p}{(}\PY{n}{verts}\PY{p}{,} \PY{n}{facecolors} \PY{o}{=} \PY{p}{[}\PY{n}{cc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{cc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{g}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{,}
+                                                    \PY{n}{cc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{b}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{,} \PY{n}{cc}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+         \PY{n}{poly}\PY{o}{.}\PY{n}{set\PYZus{}alpha}\PY{p}{(}\PY{l+m+mf}{0.7}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Posicion de z}
+         \PY{n}{zs} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.25}\PY{p}{,} \PY{l+m+mf}{0.50}\PY{p}{,} \PY{l+m+mf}{0.75}\PY{p}{]}
+         
+         \PY{c}{\PYZsh{} Dibuja los poligonos generados seleccionado}
+         \PY{c}{\PYZsh{} la señal y como eje vertical}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{add\PYZus{}collection3d}\PY{p}{(}\PY{n}{poly}\PY{p}{,} \PY{n}{zs}\PY{o}{=}\PY{n}{zs}\PY{p}{,} \PY{n}{zdir}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{Espectro}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlim3d}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{150}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{t muestra / s}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylim3d}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlabel}\PY{p}{(}\PY{l+s}{u\PYZsq{}}\PY{l+s}{C / mg/ml}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlim3d}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{0.25}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Ángulo}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{view\PYZus{}init}\PY{p}{(}\PY{l+m+mi}{20}\PY{p}{,}\PY{l+m+mi}{280}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras en archivos}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/cascada\PYZhy{}3D.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/cascada\PYZhy{}3D.png\PYZsq{},dpi=150)}
+         
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_55_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries/3D_waterfall_w_4plane_2.png}{(ver
+online)}.
+
+
+    \subsubsection{Diagramas de dispersión en 3D:}
+
+
+    Por simplicidad, el siguiente ejemplo creará los datos con funciones de
+números aleatorios. No obstante, se podría hacer el agrupamiento de
+datos \href{http://en.wikipedia.org/wiki/Iris_flower_data_set}{Iris} con
+Python y
+\href{http://claudiovz.github.io/scipy-lecture-notes-ES/packages/scikit-learn/index.html\#k-means-clustering}{scikit-learn}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+         \PY{n}{ax} \PY{o}{=} \PY{n}{fig}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{n}{projection}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{3d}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Genereamos los puntos con una distribución estándar normal de (n\PYZus{}puntos, dimensiones) }
+         \PY{c}{\PYZsh{} y su repreesntación 3d junto a la proyección en el plano x\PYZhy{}y}
+         \PY{n}{z\PYZus{}offset} \PY{o}{=} \PY{l+m+mi}{3}
+         
+         \PY{n}{coordenadas\PYZus{}clase1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+         \PY{n}{clase1} \PY{o}{=} \PY{l+m+mf}{0.15} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{standard\PYZus{}normal}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase1}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ko}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Setosa}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{zeros\PYZus{}like}\PY{p}{(}\PY{n}{clase1}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}\PY{o}{+}\PY{n}{z\PYZus{}offset}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{ko}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{coordenadas\PYZus{}clase2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{3.5}\PY{p}{,}\PY{l+m+mf}{2.5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
+         \PY{n}{clase2} \PY{o}{=} \PY{l+m+mf}{0.3} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{standard\PYZus{}normal}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase2}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{ro}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Versicolor}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{zeros\PYZus{}like}\PY{p}{(}\PY{n}{clase2}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}\PY{o}{+}\PY{n}{z\PYZus{}offset}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{ro}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{coordenadas\PYZus{}clase3} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{)}
+         \PY{n}{clase3} \PY{o}{=} \PY{l+m+mf}{0.4} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{standard\PYZus{}normal}\PY{p}{(}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase3}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{go}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.6}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{Virginica}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,} \PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{zeros\PYZus{}like}\PY{p}{(}\PY{n}{clase3}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}\PY{o}{+}\PY{n}{z\PYZus{}offset}\PY{p}{,} \PY{l+s}{\PYZsq{}}\PY{l+s}{go}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Generamos las esferas}
+         
+         \PY{n}{u1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{v1} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         
+         \PY{n}{x\PYZus{}esfera\PYZus{}1} \PY{o}{=} \PY{l+m+mi}{1}   \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{u1}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v1}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase1}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{y\PYZus{}esfera\PYZus{}1} \PY{o}{=} \PY{l+m+mf}{0.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{u1}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v1}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase1}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{z\PYZus{}esfera\PYZus{}1} \PY{o}{=} \PY{l+m+mf}{1.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{size}\PY{p}{(}\PY{n}{u1}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{v1}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase1}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{x\PYZus{}esfera\PYZus{}1}\PY{p}{,} \PY{n}{y\PYZus{}esfera\PYZus{}1}\PY{p}{,} \PY{n}{z\PYZus{}esfera\PYZus{}1}\PY{p}{,}
+                         \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{b}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+         
+         \PY{n}{u2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{v2} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         
+         \PY{n}{x\PYZus{}esfera\PYZus{}2} \PY{o}{=} \PY{l+m+mf}{1.5} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{u2}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v2}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase2}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{y\PYZus{}esfera\PYZus{}2} \PY{o}{=} \PY{l+m+mi}{1}   \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{u2}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v2}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase2}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{z\PYZus{}esfera\PYZus{}2} \PY{o}{=} \PY{l+m+mf}{1.8}   \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{size}\PY{p}{(}\PY{n}{u2}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{v2}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase2}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{x\PYZus{}esfera\PYZus{}2}\PY{p}{,} \PY{n}{y\PYZus{}esfera\PYZus{}2}\PY{p}{,} \PY{n}{z\PYZus{}esfera\PYZus{}2}\PY{p}{,}
+                         \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+         
+         \PY{n}{u3} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         \PY{n}{v3} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{pi}\PY{p}{,} \PY{l+m+mi}{100}\PY{p}{)}
+         
+         \PY{n}{x\PYZus{}esfera\PYZus{}3} \PY{o}{=} \PY{l+m+mf}{1.5}   \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{u3}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase3}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{y\PYZus{}esfera\PYZus{}3} \PY{o}{=} \PY{l+m+mi}{1}     \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{u3}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{sin}\PY{p}{(}\PY{n}{v3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase3}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}
+         \PY{n}{z\PYZus{}esfera\PYZus{}3} \PY{o}{=} \PY{l+m+mi}{2}   \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{outer}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{size}\PY{p}{(}\PY{n}{u3}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{np}\PY{o}{.}\PY{n}{cos}\PY{p}{(}\PY{n}{v3}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{n}{coordenadas\PYZus{}clase3}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{plot\PYZus{}surface}\PY{p}{(}\PY{n}{x\PYZus{}esfera\PYZus{}3}\PY{p}{,} \PY{n}{y\PYZus{}esfera\PYZus{}3}\PY{p}{,} \PY{n}{z\PYZus{}esfera\PYZus{}3}\PY{p}{,}
+                         \PY{n}{rstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{cstride}\PY{o}{=}\PY{l+m+mi}{10}\PY{p}{,} \PY{n}{linewidth}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{g}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Establcemos límites en los ejes y los etiquetamos}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlim3d}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylim3d}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlim3d}\PY{p}{(}\PY{n}{z\PYZus{}offset}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}
+         
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s}{u\PYZsq{}}\PY{l+s}{Longitud del pétalo (cm)}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{l+s}{u\PYZsq{}}\PY{l+s}{Anchura del pétalo (cm)}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}zlabel}\PY{p}{(}\PY{l+s}{u\PYZsq{}}\PY{l+s}{Longitud del sépalo (cm)}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Muestra leyenda}
+         \PY{n}{ax}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c}{\PYZsh{} Opcional si queremos salvar las figuras en archivos}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/dispersion\PYZhy{}3D.pdf\PYZsq{})}
+         \PY{c}{\PYZsh{}fig.savefig(r\PYZsq{}figuras/dispersion\PYZhy{}3D.png\PYZsq{},dpi=150)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_59_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Resultado reproducido con Origin
+\href{http://cloud.originlab.com/www/resources/graph_gallery/images_galleries_new/3D_Scatter_combined_with_Parametric_Surfaces.png}{(ver
+online)}.
+
+
+    \subsection{Un paso más allá}
+
+
+    Como se ha comentado, Python dispone de diversas librerías. Una de las
+más interesante es \href{http://sympy.org/en/index.html}{SymPy} que
+proporciona poderosas funciones sistemas de álgebra computacional (CAS,
+computer algebraic system). El siguiente código se puede ejecutar sin
+necesidad de las anteriores celdas ya que es independiente. El propósito
+es una demostración de la interactivdad con los nuevos
+\href{http://nbviewer.ipython.org/github/ipython/ipython/blob/2.x/examples/Interactive\%20Widgets/Index.ipynb}{widgets
+de IPython Notebook 2.0}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{c}{\PYZsh{} Cargamos widgets interactivos de IPython Notebook}
+         
+         \PY{k+kn}{from} \PY{n+nn}{IPython.html.widgets} \PY{k+kn}{import} \PY{n}{interact}
+         \PY{k+kn}{from} \PY{n+nn}{IPython.display} \PY{k+kn}{import} \PY{n}{display}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{c}{\PYZsh{} Cargamos las partes de SymPy que vamos a utilizar}
+         
+         \PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k+kn}{import} \PY{n}{Symbol}\PY{p}{,} \PY{n}{Eq}\PY{p}{,} \PY{n}{factor}\PY{p}{,} \PY{n}{init\PYZus{}printing}
+         \PY{n}{init\PYZus{}printing}\PY{p}{(}\PY{n}{use\PYZus{}latex}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{mathjax}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c}{\PYZsh{} Creamos la variable simbólica x}
+         \PY{n}{x} \PY{o}{=} \PY{n}{Symbol}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{c}{\PYZsh{} Creamos la función de factorización para el ejemplo}
+         \PY{k}{def} \PY{n+nf}{factorit}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{:}
+             \PY{n}{display}\PY{p}{(}\PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{factor}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    Cuando ejectuemos la función, nos devolverá un resultado en \LaTeX
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{factorit}\PY{p}{(}\PY{l+m+mi}{12}\PY{p}{)}
+\end{Verbatim}
+
+    
+        \begin{equation*}
+        x^{12} - 1 = \left(x - 1\right) \left(x + 1\right) \left(x^{2} + 1\right) \left(x^{2} - x + 1\right) \left(x^{2} + x + 1\right) \left(x^{4} - x^{2} + 1\right)
+        \end{equation*}
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{interact}\PY{p}{(}\PY{n}{factorit}\PY{p}{,} \PY{n}{n}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{20}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+    
+        \begin{equation*}
+        x^{11} - 1 = \left(x - 1\right) \left(x^{10} + x^{9} + x^{8} + x^{7} + x^{6} + x^{5} + x^{4} + x^{3} + x^{2} + x + 1\right)
+        \end{equation*}
+
+    
+    Es hora de hacer algo más interesante. Hagamos una expansión por serie
+de Taylor de $\frac{sin{x}}{x}$
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k+kn}{import} \PY{n}{Symbol}\PY{p}{,} \PY{n}{sin}\PY{p}{,} \PY{n}{series}\PY{p}{,} \PY{n}{exp}
+         \PY{n}{x} \PY{o}{=} \PY{n}{Symbol}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{ecuacion\PYZus{}ejemplo} \PY{o}{=}  \PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{/}\PY{n}{x}
+         \PY{n}{orden} \PY{o}{=} \PY{l+m+mi}{5}
+         
+         \PY{n}{series}\PY{p}{(}\PY{n}{ecuacion\PYZus{}ejemplo}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{n}\PY{o}{=}\PY{n}{orden}\PY{p}{)}
+\end{Verbatim}
+\texttt{\color{outcolor}Out[{\color{outcolor}21}]:}
+    
+    
+        \begin{equation*}
+        1 - \frac{x^{2}}{6} + \frac{x^{4}}{120} + \mathcal{O}\left(x^{5}\right)
+        \end{equation*}
+
+    
+
+    Vamos a representar los resultados de forma interactiva
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{k+kn}{from} \PY{n+nn}{sympy.plotting} \PY{k+kn}{import} \PY{n}{plot}
+         
+         \PY{c}{\PYZsh{} Representa las figuras en línea con el documento (no en una ventana emergente)}
+         \PY{o}{\PYZpc{}}\PY{k}{matplotlib} \PY{n}{inline}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{k}{def} \PY{n+nf}{taylor\PYZus{}graf}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{p}{:}
+             
+             \PY{n}{e} \PY{o}{=} \PY{n}{exp}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+             \PY{n}{ecuacion} \PY{o}{=} \PY{n}{e}\PY{o}{*}\PY{o}{*}\PY{n}{x}
+             
+             \PY{c}{\PYZsh{}calculamos la expansion elimnando el termino del error}
+             \PY{n}{ecuacion\PYZus{}aprox} \PY{o}{=} \PY{n}{series}\PY{p}{(}\PY{n}{ecuacion}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{n}\PY{o}{=}\PY{n}{n}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{.}\PY{n}{removeO}\PY{p}{(}\PY{p}{)}
+             
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ecuacion}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,} \PY{n}{show}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,} \PY{n}{line\PYZus{}color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{b}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{ecuacion}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ecuacion\PYZus{}aprox}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,} \PY{n}{show}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,} \PY{n}{line\PYZus{}color}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{r}\PY{l+s}{\PYZsq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s}{\PYZsq{}}\PY{l+s}{aprox}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+             
+             \PY{c}{\PYZsh{} Haz la segunda función parte de la primera}
+             \PY{n}{p1}\PY{o}{.}\PY{n}{extend}\PY{p}{(}\PY{n}{p2}\PY{p}{)}
+             \PY{c}{\PYZsh{} Nota: Este código se debe a que representar dos funciones juntas con diferentes colores }
+             \PY{c}{\PYZsh{} aun no está implmentado}
+             \PY{c}{\PYZsh{} http://stackoverflow.com/questions/21429866/change\PYZhy{}color\PYZhy{}implicit\PYZhy{}plot\PYZhy{}sympy}
+             
+             \PY{n}{p1}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+    Función exponencial $e^x$ (en azul) y la suma de los primeros n+1
+términos
+
+    de su serie de Taylor en torno a cero (en rojo).
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{interact}\PY{p}{(}\PY{n}{taylor\PYZus{}graf}\PY{p}{,} \PY{n}{n}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_77_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+%    Si estás viendo este IPython Notebook offline, este es el resultado:
+%\includegraphics{figuras/taylor-exp.gif}
+
+    Por último, SymPy también representa expresiones matemáticas en 3D:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k+kn}{import} \PY{n}{symbols}
+         \PY{k+kn}{from} \PY{n+nn}{sympy.plotting} \PY{k+kn}{import} \PY{n}{plot3d}
+         
+         \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s}{\PYZsq{}}\PY{l+s}{x y}\PY{l+s}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{plot3d}\PY{p}{(}\PY{n+nb}{abs}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{n}{y}\PY{p}{)}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,} \PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{originlab-python_files/originlab-python_81_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+            \begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}29}]:} <sympy.plotting.plot.Plot at 0x1370da58>
+\end{Verbatim}
+        
+    Este IPython Notebook puede imprimirse en PDF generando (previamente) un
+archivo ``.tex'' \LaTeX mediante
+\href{http://johnmacfarlane.net/pandoc/}{pandoc}. Por ejemplo para
+obtener el archivo basta con ejecutar en la línea de comandos el
+siguiente código
+
+\texttt{ipython nbconvert -{}-to latex originlab-python.ipynb}
+
+Si se desea obtener más información, consultar
+\href{http://ipython.org/ipython-doc/stable/notebook/nbconvert.html}{documentación}.
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
